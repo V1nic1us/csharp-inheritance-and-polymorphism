@@ -21,5 +21,15 @@ namespace csharp_inheritance_and_polymorphism.Entities
         {
             Balance += Balance * InterestRate;
         }
+
+        public override void withdraw(double amount)
+        {
+            //if (amount > 0 || Balance > 0)
+            //{
+            //    Balance -= amount;
+            //}
+            base.withdraw(amount);
+            Balance -= 2.0;
+        }
     }
 }

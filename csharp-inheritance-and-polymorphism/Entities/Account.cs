@@ -21,11 +21,11 @@ namespace csharp_inheritance_and_polymorphism.Entities
             Balance = balance;
         }
 
-        public void withdraw(double amount)
+        public virtual void withdraw(double amount)
         {
-            if (amount > 0)
+            if (amount > 0 || Balance > 0)
             {
-                Balance -= amount;
+                Balance -= amount + 5;
             }
         }
 
